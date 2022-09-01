@@ -26,10 +26,10 @@ Contributing to the manual: https://github.com/NixOS/nixpkgs/blob/634141959076a8
 ### destroy
 Destroy the specified container.
 
-- start 
-- stop 
-- terminate 
-- status 
+### start 
+### stop 
+### terminate 
+### status 
 ### update
 Update a currently created container
 with a new confiuration, the configuration for the container can be passed in through a number of ways.
