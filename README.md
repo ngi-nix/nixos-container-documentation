@@ -21,6 +21,8 @@ Example: https://github.com/NixOS/nixpkgs/blob/634141959076a8ab69ca2cca0f2668522
 
 Contributing to the manual: https://github.com/NixOS/nixpkgs/blob/634141959076a8ab69ca2cca0f266852256d79ee/nixos/doc/manual/contributing-to-this-manual.chapter.md
 
+
+## Description
 ## Subcommands
 
 ### destroy
@@ -54,7 +56,7 @@ List the currently configured containers and their status.
 
 ### create
 Create a new nixos container, that can be later started.
-#### Flags
+#### Options
         --nixos-path
         --system-path 
         --config 
@@ -81,19 +83,23 @@ Login to a container with the given name.
 ## Usage
 
 List running containers
-$ sudo nixos-container list
+```$ sudo nixos-container list```
 
 Create a NixOS container with a specific configuration file
-$ sudo nixos-container create [container_name] --config-file [nix_config_file_path]
+```$ sudo nixos-container create [container_name] --config-file [nix_config_file_path]```
 
 Start, stop, terminate, or destroy a specific container
-$ sudo nixos-container [start|stop|terminate|destroy|status] [container_name]
+```$ sudo nixos-container [start|stop|terminate|destroy|status] [container_name]```
 
 Run a command in a running container
-$ sudo nixos-container run [container_name] -- [command] [command_arguments]
+```$ sudo nixos-container run [container_name] -- [command] [command_arguments]```
 
 Update a container configuration
-$ sudo $EDITOR /var/lib/container/[container_name]/etc/nixos/configuration.nix && sudo nixos-container update [container_name]
+```$ sudo $EDITOR /var/lib/container/[container_name]/etc/nixos/configuration.nix && sudo nixos-container update [container_name]```
 
 Enter an interactive shell session on an already-running container
-$ sudo nixos-container root-login [container_name]
+```$ sudo nixos-container root-login [container_name]```
+
+
+
+## Examples
